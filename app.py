@@ -118,7 +118,7 @@ if st.button("予測"):
         from matplotlib import rcParams
 
         # Configure font for Japanese support
-        rcParams['font.family'] = 'DejaVu Sans'
+        rcParams['font.family'] = 'Hiragino Maru Gothic Pro'
 
         # Data
         x_labels = ["予測スコア", "合格スコア"]
