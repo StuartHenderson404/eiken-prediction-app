@@ -150,7 +150,7 @@ if st.button("予測"):
         # Add a comment if the predicted score is 100 points or less above the passing score
         if predicted_cse - passing_score <= 100:
             ax.annotate(
-                "ギリギリ！",  # Annotation text
+                "Only Just！",  # Annotation text
                 xy=(x_positions[1], predicted_y),  # Position of the annotation (near the line)
                 xytext=(x_positions[1] + 0.2, predicted_y + 20),  # Adjust the text position
                 fontsize=12,
@@ -162,8 +162,8 @@ if st.button("予測"):
         ax.set_xticks(x_positions)  # Set x-tick positions
         ax.set_xticklabels(x_labels, fontsize=12)  # Set x-tick labels
         ax.set_xlim(-0.5, len(x_labels) - 0.5)  # Ensure the bars are centered
-        ax.set_ylabel("スコア", fontsize=12)
-        ax.set_title(f"{eiken_level}のスコア分析", fontsize=14)
+        ax.set_ylabel("Score", fontsize=12)
+        ax.set_title(f"{eiken_level} Score Analysis", fontsize=14)
 
         # Convert the figure to a PNG image
         from io import BytesIO
