@@ -5,7 +5,6 @@ import streamlit as st
 import pickle
 import numpy as np
 
-st.image("/users/stuart/Documents/MyPythonProject/EikenLogo.png", width=100)  # Add a local image or URL
 st.title("英検CSEスコア予測アプリ")
 st.markdown("""
 英検CSEスコア予測ツールへようこそ!
