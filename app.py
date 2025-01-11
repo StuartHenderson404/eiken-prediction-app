@@ -131,7 +131,7 @@ if st.button("予測"):
         plt.show()
 
         # Data
-        x_labels = ["予測スコア", "合格スコア"]
+        x_labels = ["Predicted Score", "Passing Score"]
         y_values = [predicted_cse, passing_score]
         bar_width = 0.5  # Bar width
 
