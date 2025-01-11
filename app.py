@@ -112,15 +112,14 @@ if st.button("予測"):
 
         st.progress(min(predicted_cse / passing_score, 1.0))
 
-        import streamlit as st
         import matplotlib.pyplot as plt
-        import numpy as np
         from matplotlib import rcParams
+        from matplotlib import font_manager as fm
 
-        # Configure font for Japanese support
-        import matplotlib.font_manager as fm
-        st.write("Available fonts:")
-        st.write([f.name for f in fm.fontManager.ttflist])
+        # Set the path to the bundled font
+        font_path = "fonts/yu-gothic-regular.ttf"
+        prop = fm.FontProperties(fname=font_path)
+        rcParams['font.family'] = prop.get_name()
 
         # Data
         x_labels = ["予測スコア", "合格スコア"]
