@@ -116,10 +116,19 @@ if st.button("予測"):
         from matplotlib import rcParams
         from matplotlib import font_manager as fm
 
-        # Set the path to the bundled font
-        font_path = "fonts/yu-gothic-regular.ttf"
-        prop = fm.FontProperties(fname=font_path)
-        rcParams['font.family'] = prop.get_name()
+        # Path to the bundled font
+        font_path = "fonts/NotoSansJP.ttf"
+        jp_font = fm.FontProperties(fname=font_path)  # Load the font
+
+        # Apply the font globally
+        rcParams['font.family'] = jp_font.get_name()  # Set as default font
+
+        # Test with Japanese text
+        fig, ax = plt.subplots()
+        ax.bar(["予測スコア", "合格スコア"], [1300, 1520], color=["blue", "green"])
+        ax.set_title("日本語テスト", fontsize=16)  # Example Japanese title
+        ax.set_ylabel("スコア", fontsize=12)
+        plt.show()
 
         # Data
         x_labels = ["予測スコア", "合格スコア"]
