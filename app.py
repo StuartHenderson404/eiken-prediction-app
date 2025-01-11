@@ -147,17 +147,6 @@ if st.button("予測"):
         predicted_y = y_values[0]  # Y-value of the predicted score bar (height)
         ax.hlines(predicted_y, predicted_x - bar_width / 2, x_positions[1] + bar_width / 2, colors="red", linestyles="dashed", linewidth=1.5)
 
-        # Add a comment if the predicted score is 100 points or less above the passing score
-        if predicted_cse - passing_score <= 100:
-            ax.annotate(
-                "Only Just！",  # Annotation text
-                xy=(x_positions[1], predicted_y),  # Position of the annotation (near the line)
-                xytext=(x_positions[1] + 0.2, predicted_y + 20),  # Adjust the text position
-                fontsize=12,
-                color="red",
-                arrowprops=dict(arrowstyle="->", color="red", linewidth=1.5)  # Optional arrow pointing to the line
-            )
-
         # Customize the x-axis
         ax.set_xticks(x_positions)  # Set x-tick positions
         ax.set_xticklabels(x_labels, fontsize=12)  # Set x-tick labels
